@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack;
+    background-color: $background-color;
+    color: $font-color;
+    font-size: $font-size;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+button{
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover{
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+input{
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
