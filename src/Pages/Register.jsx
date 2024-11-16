@@ -38,32 +38,42 @@ function Register() {
             alert('An error occurred');
         }
     };
-    return (
-        <div className='register-container'>
-            <h1>Register</h1>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Confirm password"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                />
-                <button type="submit">Register</button>
-            </form>
-        </div>
-    );
+
+    const handleLogin = () => {
+        navigate('/login');
+    };
+
+return (
+    <div className='register-container'>
+        <h1>Register</h1>
+        <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            />
+            <input
+                type="password"
+                placeholder="Confirm password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+            <button type="submit">Register</button>
+
+            <p className='account-suggestion'>Already have an account?</p>
+            
+            <button type="button" onClick={handleLogin} className='other-action'>Login</button>
+        </form>
+    </div>
+);
+
 }
 
 export default Register;
