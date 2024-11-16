@@ -61,7 +61,6 @@ return (
       />
       <button type="submit">Login</button>
       
-      {/* New text for account suggestion */}
       <p className='account-suggestion'>Don't have an account yet?</p>
       
       <button type="button" onClick={handleRegister} className='other-action'>Register</button>
